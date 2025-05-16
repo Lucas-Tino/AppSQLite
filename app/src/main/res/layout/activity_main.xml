@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Cadastro"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:layout_marginBottom="25dp" />
 
     <TextView
@@ -25,21 +25,6 @@
 
     <EditText
         android:id="@+id/edtNome"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:id="@+id/txtCpf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="CPF"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/edtCpf"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -76,26 +61,11 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/txtCidade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Cidade"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/edtCidade"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"/>
-
-    <TextView
         android:id="@+id/txtCep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="CEP"
+        android:text="Cep"
         android:textSize="20sp" />
 
     <EditText
@@ -104,6 +74,37 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtObservacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Observações"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtObservacoes"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Data de Cadastro"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtData"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:inputType="date"/>
 
     <Button
         android:id="@+id/btnCadastrar"

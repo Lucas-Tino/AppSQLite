@@ -15,11 +15,11 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         val query = ("CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY, " +
                 NAME_COL + " TEXT," +
-                CPF_COL + " TEXT," +
                 END_COL + " TEXT," +
                 BAR_COL + " TEXT," +
-                CID_COL + " TEXT," +
-                CEP_COL + " TEXT" + ")")
+                CEP_COL + " TEXT," +
+                OBS_COL + " TEXT," +
+                DAT_COL + " TEXT" + ")")
 
         // we are calling sqlite
         // method for executing our query
@@ -33,7 +33,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     }
 
     // This method is for adding data in our database
-    fun addPessoa(name : String, cpf: String, endereco : String, bairro : String, cidade: String, cep : String ){
+    fun addPessoa(name : String, endereco : String, bairro : String, cep : String, observacoes: String, data: String, ){
 
         // below we are creating
         // a content values variable
@@ -42,11 +42,11 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // we are inserting our values
         // in the form of key-value pair
         values.put(NAME_COL, name)
-        values.put(CPF_COL, cpf)
         values.put(END_COL, endereco)
         values.put(BAR_COL, bairro)
-        values.put(CID_COL, cidade)
         values.put(CEP_COL, cep)
+        values.put(OBS_COL, observacoes)
+        values.put(DAT_COL, data)
 
         // here we are creating a
         // writable variable of
@@ -80,19 +80,19 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // below is the variable for name column
         val NAME_COL = "name"
 
-        // below is the variable for cpf column
-        val CPF_COL = "cpf"
-
-        // below is the variable for age column
+        // below is the variable for endereco column
         val END_COL = "endereco"
 
-        // below is the variable for age column
+        // below is the variable for bairro column
         val BAR_COL = "bairro"
 
-        // below is the variable for cidade column
-        val CID_COL = "cidade"
-
-        // below is the variable for age column
+        // below is the variable for cep column
         val CEP_COL = "cep"
+
+        // below is the variable for observacoes column
+        val OBS_COL = "observacoes"
+
+        // below is the variable for data column
+        val DAT_COL = "data"
     }
 }

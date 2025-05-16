@@ -15,28 +15,30 @@ class RespostaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resposta)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle("App Cadastro SQL")
 
         val edtNome:EditText = findViewById(R.id.edtNome)
-        val edtCpf:EditText = findViewById(R.id.edtCpf)
         val edtEndereco:EditText = findViewById(R.id.edtEndereco)
         val edtBairro:EditText = findViewById(R.id.edtBairro)
-        val edtCidade:EditText = findViewById(R.id.edtCidade)
         val edtCep:EditText = findViewById(R.id.edtCep)
+        val edtObservacoes:EditText = findViewById(R.id.edtObservacoes)
+        val edtData:EditText = findViewById(R.id.edtData)
+
         val btnConfirmar:Button = findViewById(R.id.btnConfirmar)
 
         edtNome.setText(intent.getStringExtra("nome"))
-        edtCpf.setText(intent.getStringExtra("cpf"))
         edtEndereco.setText(intent.getStringExtra("endereco"))
         edtBairro.setText(intent.getStringExtra("bairro"))
-        edtCidade.setText(intent.getStringExtra("cidade"))
         edtCep.setText(intent.getStringExtra("cep"))
+        edtObservacoes.setText(intent.getStringExtra("observacoes"))
+        edtData.setText(intent.getStringExtra("data"))
 
         // SQLite
         val db = DBHelper(this, null)
 
         btnConfirmar.setOnClickListener {
-            db.addPessoa(edtNome.text.toString(), edtCpf.text.toString(), edtEndereco.text.toString(), edtBairro.text.toString(),
-                edtCidade.text.toString(), edtCep.text.toString())
+            db.addPessoa(edtNome.text.toString(), edtEndereco.text.toString(), edtBairro.text.toString(),
+                        edtCep.text.toString(), edtObservacoes.text.toString(), edtData.text.toString(),)
             finish()
         }
     }

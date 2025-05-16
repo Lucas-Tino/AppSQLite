@@ -26,23 +26,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.setTitle("App Cadastro SQL")
+
         val edtNome:EditText = findViewById(R.id.edtNome)
-        val edtCpf:EditText = findViewById(R.id.edtCpf)
         val edtEndereco:EditText = findViewById(R.id.edtEndereco)
         val edtBairro:EditText = findViewById(R.id.edtBairro)
-        val edtCidade:EditText = findViewById(R.id.edtCidade)
         val edtCep:EditText = findViewById(R.id.edtCep)
+        val edtObservacoes:EditText = findViewById(R.id.edtObservacoes)
+        val edtData:EditText = findViewById(R.id.edtData)
 
         val btnCadastrar:Button = findViewById(R.id.btnCadastrar)
 
         btnCadastrar.setOnClickListener {
             val intent = Intent(this, RespostaActivity::class.java)
             intent.putExtra("nome",edtNome.text.toString())
-            intent.putExtra("cpf",edtCpf.text.toString())
             intent.putExtra("endereco",edtEndereco.text.toString())
             intent.putExtra("bairro",edtBairro.text.toString())
-            intent.putExtra("cidade",edtCidade.text.toString())
             intent.putExtra("cep",edtCep.text.toString())
+            intent.putExtra("observacoes",edtObservacoes.text.toString())
+            intent.putExtra("data",edtData.text.toString())
             startActivity(intent)
         }
     }
